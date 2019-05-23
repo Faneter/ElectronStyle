@@ -1,0 +1,15 @@
+.titleBar{
+    -webkit-app-region: drag;
+}
+.icon{
+    -webkit-app-region: drag;
+}
+.menus{
+    -webkit-app-region: no-drag;
+}
+.title{
+    -webkit-app-region: drag;
+}
+.buttons{
+    -webkit-app-region: no-drag;
+}

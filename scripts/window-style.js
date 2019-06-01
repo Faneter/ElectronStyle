@@ -1,6 +1,6 @@
 const os = require("os");
 const osType = os.type();
-function page(){
+function page() {
     // 创建对象
     var titleBar = document.getElementById("titleBar");
     if (!titleBar) {
@@ -47,26 +47,29 @@ function page(){
             titleBar.appendChild(buttons);
         }
     }
-    function appendMenu(menu){
+    function appendMenu(type,menu){
         if (osType != "Darwin") {
 
         }
         /**
          * 在 Electron 中
          * 构建一个菜单的 json 格式是这样的:
-         * *
          * {
-         *   label:string,
-         * 
+         *   label:string,       // 菜单名
+         *   submenu:arr[],      // 子菜单
+         *   accelerator:string  // 快捷键
          * }
-         * *
+         * 所以我们可以根据这个json来实例一个菜单
          * 
          * @param {*} menujson 
          */
-        function getMenus(menujson){
+        function createMenu(menujson) {
+            var label = menujson.label;
+            var submenus = menujson.submenu;
+            var accelerator = menujson.accelerator;
 
         }
-        function getSubMenus(){
+        function createSubMenu(){
 
         }
     }

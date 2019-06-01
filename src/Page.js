@@ -46,38 +46,20 @@ class Page {
                 titleBar.appendChild(buttons);
             }
         }
-        /**
-         * 为页面添加菜单
-         * 
-         * @param {string} type - 菜单的类型
-         * @param {Menu} menu - 菜单
-         */
-        function appendMenu(type, menu) {
-            if (osType != "Darwin") {
-
-            }
-            /**
-             * 在 Electron 中
-             * 构建一个菜单的 json 格式是这样的:
-             * {
-             *   label:string,       // 菜单名
-             *   submenu:arr[],      // 子菜单
-             *   accelerator:string  // 快捷键
-             * }
-             * 所以我们可以根据这个json来实例一个菜单
-             * 
-             * @param {JSON} menujson 
-             */
-            function createMenu(menujson) {
-                var label = menujson.label;
-                var submenus = menujson.submenu;
-                var accelerator = menujson.accelerator;
-
-            }
+    }
+    /**
+     * 为页面添加一个菜单
+     * 
+     * @param {Menu} menu - 菜单
+     */
+    appendMenu(menu) {
+        if (osType != "Darwin") {
+            showTitleBar();
         }
-        function showTitleBar() {
-            document.body.appendChild(titleBar);
-        }
+        this.menus.appendChild(menu);
+    }
+    showTitleBar() {
+        document.body.appendChild(titleBar);
     }
 }
 module.exports = Page;

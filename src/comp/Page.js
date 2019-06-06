@@ -1,14 +1,14 @@
 class Page {
-    // 创建对象
+    // 创建对象 TODO: 系统适配
     constructor() {
-        this.titleBar = document.getElementById("titleBar");
+        this.titleBar = document.getElementById("titleBar"); // 标题栏
         if (!titleBar) {
             titleBar = document.createElement("section");
             var attr = document.createAttribute("id");
             attr.value = "titleBar";
             titleBar.setAttribute(attr);
         }
-        this.icon = document.getElementById("icon");
+        this.icon = document.getElementById("icon"); // 应用图标
         if (!icon) {
             if (osType != "Darwin") {
                 icon = document.createElement("section");
@@ -18,7 +18,7 @@ class Page {
                 titleBar.appendChild(icon);
             }
         }
-        this.menus = document.getElementById("menus");
+        this.menus = document.getElementById("menus"); // 菜单
         if (!menus) {
             if (osType != "Darwin") {
                 menus = document.createElement("section");
@@ -28,7 +28,7 @@ class Page {
                 titleBar.appendChild(menus);
             }
         }
-        this.title = document.getElementById("title");
+        this.title = document.getElementById("title"); // 标题
         if (!title) {
             title = document.createElement("section");
             var attr = document.createAttribute("id");
@@ -36,7 +36,7 @@ class Page {
             title.setAttribute(attr);
             titleBar.appendChild(title);
         }
-        this.buttons = document.getElementById("buttons");
+        this.buttons = document.getElementById("buttons"); // 按钮栏
         if (!buttons) {
             if (osType != "Darwin") {
                 buttons = document.getElementById("section");
@@ -53,11 +53,14 @@ class Page {
      * @param {Menu} menu - 菜单
      */
     appendMenu(menu) {
+        var menuElement = menu.getMenuElement();
         if (osType != "Darwin") {
-            showTitleBar();
+            this.menus.appendChild(menuElement);
         }
-        this.menus.appendChild(menu);
     }
+    /**
+     * 显示标题栏
+     */
     showTitleBar() {
         document.body.appendChild(titleBar);
     }

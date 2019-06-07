@@ -2,7 +2,7 @@
  * 标签
  * 可带有文本和图标等
  */
-class Label {
+class Label extends Component{
     /**
      * 创建一个不包含任何东西的标签
      */

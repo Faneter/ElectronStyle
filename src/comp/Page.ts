@@ -1,9 +1,9 @@
-class Page {
+class Page extends Container{
     // 创建对象 TODO: 系统适配
     constructor() {
-        this.titleBar = document.getElementById("titleBar"); // 标题栏
+        this.titleBar = document.getElementById("title-bar"); // 标题栏
         if (!titleBar) {
-            titleBar = document.createElement("section");
+            titleBar = document.createElement("div");
             var attr = document.createAttribute("id");
             attr.value = "titleBar";
             titleBar.setAttribute(attr);
@@ -11,21 +11,21 @@ class Page {
         this.icon = document.getElementById("icon"); // 应用图标
         if (!icon) {
             if (osType != "Darwin") {
-                icon = document.createElement("section");
+                icon = document.createElement("img");
                 var attr = document.createAttribute("id");
                 attr.value = "icon";
                 icon.setAttribute(attr);
                 titleBar.appendChild(icon);
             }
         }
-        this.menus = document.getElementById("menus"); // 菜单
-        if (!menus) {
+        this.menuBar = document.getElementById("menuBar"); // 菜单
+        if (!menuBar) {
             if (osType != "Darwin") {
-                menus = document.createElement("section");
+                this.menuBar = document.createElement("ul");
                 var attr = document.createAttribute("id");
                 attr.value = "menus";
-                menus.setAttribute(attr);
-                titleBar.appendChild(menus);
+                this.menuBar.setAttribute(attr);
+                titleBar.appendChild(this.menuBar);
             }
         }
         this.title = document.getElementById("title"); // 标题

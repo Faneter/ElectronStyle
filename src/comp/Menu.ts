@@ -1,3 +1,11 @@
+/**
+ * 菜单采用嵌套div标签
+ * 例如:
+ * <div id="menubar">
+ *   <div id="menu">
+ *   <div>
+ * </div>
+ */
 class Menu {
     /**
      * 创建一个菜单

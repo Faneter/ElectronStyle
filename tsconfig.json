@@ -16,7 +16,6 @@
     "./src/comp/Menu.ts",
     "./src/comp/MenuBar.ts",
     "./src/comp/MenuItem.ts",
-    "./src/comp/Page.ts"
-
+    "./src/comp/Page.ts",
   ]
 }

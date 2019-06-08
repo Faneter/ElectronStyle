@@ -1,0 +1,2 @@
+class MenuBar extends Component {
+}

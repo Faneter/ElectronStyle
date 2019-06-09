@@ -5,9 +5,12 @@ abstract class Component {
   protected component: HTMLElement;
   constructor(type: string) {
     this.component = document.createElement(type);
-    this.setUI();
+    Manager.addComp(this);
   }
-  public abstract setUI(): void;
+  public setUI(ui: UI): void {
+    var css = this.component.getAttribute("class");
+    css = css + " " + ui.getStyleName();
+  }
   public abstract setTheme(): void;
   public addEventListener(
     type: string,

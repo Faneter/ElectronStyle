@@ -1,9 +1,9 @@
 class MenuItem extends Component {
     constructor() {
-        super();
-        this.menuItem = document.createElement("li");
+        super("div");
     }
+    setTheme() { }
     getMenuItemElement() {
-        return this.menuItem;
+        return this.component;
     }
 }

@@ -1,4 +1,10 @@
 class Page extends Container {
+    setUI() {
+        throw new Error("Method not implemented.");
+    }
+    setTheme() {
+        throw new Error("Method not implemented.");
+    }
     // 创建对象 TODO: 系统适配
     constructor() {
         this.titleBar = document.getElementById("title-bar"); // 标题栏

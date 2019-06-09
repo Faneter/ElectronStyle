@@ -8,10 +8,9 @@
     "outDir": "./build" //重定向输出目录。
   },
   "files": [
-    "./src/electron-style.ts",
+    "./src/index.ts",
     "./src/comp/Component.ts",
     "./src/comp/Container.ts",
-    "./src/comp/Label.ts",
     "./src/comp/Menu.ts",
     "./src/comp/MenuBar.ts",
     "./src/comp/MenuItem.ts",

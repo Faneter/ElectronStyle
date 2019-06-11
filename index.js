@@ -1,0 +1,9 @@
+module.exports.Component = require("./lib/comp/Component");
+module.exports.Container = require("./lib/comp/Container");
+module.exports.Manager = require("./lib/comp/Manager");
+module.exports.Menu = require("./lib/comp/Menu");
+module.exports.MenuBar = require("./lib/comp/MenuBar");
+module.exports.MenuItem = require("./lib/comp/MenuItem");
+module.exports.Page = require("./lib/comp/Page");
+module.exports.Theme = require("./lib/theme/Theme");
+module.exports.UI = require("./lib/ui/UI");

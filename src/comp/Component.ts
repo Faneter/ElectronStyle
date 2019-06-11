@@ -1,6 +1,6 @@
 /**
  * 组件
- */
+ */ 
 abstract class Component {
   protected component: HTMLElement;
   protected ui: UI;
@@ -37,7 +37,13 @@ abstract class Component {
     type: string,
     listener: EventListenerOrEventListenerObject
   ): void {
-    this.component.addEventListener(type, listener);
+    this.getElement().addEventListener(type, listener);
+  }
+  public removeEventListener(
+    type: string,
+    listener: EventListenerOrEventListenerObject
+  ): void {
+    this.getElement().removeEventListener(type, listener);
   }
 }
 module.exports = Component;

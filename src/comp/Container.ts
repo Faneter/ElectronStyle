@@ -12,19 +12,19 @@ class Container extends Component {
   }
   /**
    * 为容器添加组件
-   * TODO: 添加组件
    *
-   * @param {Component} comp - 要添加的组件
+   * @param comp - 要添加的组件
    */
-  public append(comp): void {
-    this.components.join(comp);
+  public append(comp: Component): void {
+    this.components.push(comp);
+    this.getElement().appendChild(comp.getElement());
   }
   /**
    * 获取所有组件
    *
    * @returns 所有组件
    */
-  getComponents(): Component[] {
+  public getComponents(): Component[] {
     return this.components;
   }
 }

@@ -10,13 +10,11 @@
   "files": [
     "./src/comp/Component.ts",
     "./src/comp/Container.ts",
-    "./src/comp/Menu.ts",
-    "./src/comp/MenuBar.ts",
+    "./src/comp/Manager.ts",
     "./src/comp/MenuItem.ts",
     "./src/comp/Page.ts",
-    "./src/comp/Manager.ts",
+    "./src/comp/TitleBar.ts",
     "./src/ui/UI.ts",
-    "./src/ui/Rounded/Rounded.ts",
     "./src/theme/Theme.ts"
   ]
 }

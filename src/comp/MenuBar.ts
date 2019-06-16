@@ -1,3 +1,0 @@
-class MenuBar extends Component{
-
-}

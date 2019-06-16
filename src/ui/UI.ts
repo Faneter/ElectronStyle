@@ -1,13 +1,24 @@
+/**
+ * UI
+ * 用来定义组件的样式
+ * 例如:圆角等
+ */
 class UI {
-  private css: HTMLLinkElement;
+  private json: JSON;
   private styleName: string;
-  constructor(csspath: string, styleName: string) {
-    this.css = document.createElement("link");
+  constructor(jsonPath: string, styleName: string) {
+    var jsonT: JSON;
+    var fs = require("fs");
+    fs.readFile(jsonPath, function(err, data) {
+      if (err) {
+        throw new Error(err);
+      } else {
+        var jsonFile = data.toString();
+        jsonT = JSON.parse(jsonFile);
+      }
+    });
+    this.json = jsonT;
     this.styleName = styleName;
-    this.css.setAttribute("rel", "stylesheet");
-    this.css.setAttribute("href", csspath);
-    this.css.setAttribute("type", "text/css");
-    document.head.appendChild(this.css);
   }
   public getStyleName(): string {
     return this.styleName;

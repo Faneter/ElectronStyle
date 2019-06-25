@@ -8,13 +8,18 @@
     "outDir": "./lib" //重定向输出目录。
   },
   "files": [
-    "./src/comp/Component.ts",
-    "./src/comp/Container.ts",
-    "./src/comp/Manager.ts",
-    "./src/comp/MenuItem.ts",
-    "./src/comp/Page.ts",
-    "./src/comp/TitleBar.ts",
-    "./src/ui/UI.ts",
-    "./src/theme/Theme.ts"
+    "src/comp/Component.ts",
+    "src/comp/Container.ts",
+    "src/comp/Manager.ts",
+    "src/comp/MenuItem.ts",
+    "src/comp/Page.ts",
+    "src/comp/TitleBar.ts",
+    "src/visual/ui/UI.ts",
+    "src/Type/Type.ts",
+    "src/Type/Visible.ts",
+    "src/Type/Location.ts",
+    "src/visual/LookAndFeel/LookAndFeel.ts",
+    "src/visual/LookAndFeel/macOS/macOSLookAndFeel.ts",
+    "src/Type/UIType.ts"
   ]
 }

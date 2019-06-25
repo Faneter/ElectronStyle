@@ -1,17 +1,22 @@
 class Page extends Container {
-  private titleBar: TitleBar;
+  protected titleBar: ElectronStyle.TitleBar;
   // 创建对象 TODO: 系统适配
-  constructor() {
+  constructor(type?: ElectronStyle.Type) {
     super();
-    this.titleBar = new TitleBar();
+    this.titleBar = new ElectronStyle.TitleBar();
   }
+  protected init() {}
+  protected createTitleBar(): ElectronStyle.TitleBar {
+    return new ElectronStyle.TitleBar();
+  }
+  public setTitleBar(titleBar: ElectronStyle.TitleBar): void {} // TODO:
   /**
    * 为页面添加一个菜单
    *
    * @param menu - 菜单
    */
   appendMenu(menu) {
-    // this.titleBar
+    // this.titleBar TODO:
   }
 }
 module.exports = Page;

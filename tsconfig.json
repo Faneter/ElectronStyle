@@ -15,7 +15,16 @@
     "src/comp/Page.ts",
     "src/comp/TitleBar.ts",
     "src/visual/ui/UI.ts",
+<<<<<<< HEAD
     "src/visual/LookAndFeel/LookAndFeel.ts",
     "src/visual/LookAndFeel/macOS/macOSLookAndFeel.ts"
+=======
+    "src/Type/Type.ts",
+    "src/Type/Visible.ts",
+    "src/Type/Location.ts",
+    "src/visual/LookAndFeel/LookAndFeel.ts",
+    "src/visual/LookAndFeel/macOS/macOSLookAndFeel.ts",
+    "src/Type/UIType.ts"
+>>>>>>> b4934bba499efd60bb594720f74564c591fa59fe
   ]
 }

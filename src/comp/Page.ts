@@ -1,7 +1,7 @@
 class Page extends Container {
   protected titleBar: ElectronStyle.TitleBar;
   // 创建对象 TODO: 系统适配
-  constructor() {
+  constructor(type?: ElectronStyle.Type) {
     super();
     this.titleBar = new ElectronStyle.TitleBar();
   }

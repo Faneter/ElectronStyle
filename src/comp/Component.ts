@@ -1,19 +1,22 @@
 /**
  * 组件
  */
-
-abstract class Component {
+class Component {
+  protected type: string;
   protected component: HTMLElement;
-  protected ui: UI;
-  protected theme: Theme;
+  protected ui: ElectronStyle.UI;
   constructor(type: string) {
+    this.type = type;
     this.component = document.createElement(type);
     Manager.addComp(this);
+  }
+  public getType(): string {
+    return this.type;
   }
   public getElement(): Element {
     return this.component;
   }
-  public getUI(): UI {
+  public getUI(): ElectronStyle.UI {
     return this.ui;
   }
   /**
@@ -21,7 +24,7 @@ abstract class Component {
    *
    * @param ui - 要设置的组件的UI
    */
-  public setUI(ui: UI): void {
+  public setUI(ui: ElectronStyle.UI): void {
     var lastUIName = this.ui.getStyleName();
     if (ui != null) {
       this.ui = ui;
@@ -31,24 +34,6 @@ abstract class Component {
       css.replace(lastUIName, css);
     } else {
       css = css + " " + ui.getStyleName();
-      this.getElement().setAttribute("class", css);
-    }
-  }
-  /**
-   * 设置组件主题
-   *
-   * @param theme - 要设置的组件主题
-   */
-  public setTheme(theme: Theme): void {
-    var lastThemeName = this.theme.getStyleName();
-    if (theme != null) {
-      this.theme = theme;
-    }
-    var css = this.getElement().getAttribute("class");
-    if (css.indexOf(lastThemeName) > -1) {
-      css.replace(lastThemeName, css);
-    } else {
-      css = css + " " + theme.getStyleName();
       this.getElement().setAttribute("class", css);
     }
   }
